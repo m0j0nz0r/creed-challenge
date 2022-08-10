@@ -1,0 +1,98 @@
+@import "../../../styles/_variables.scss";
+@import "../../../styles/_fonts.scss";
+$shadow-color: rgba(165,2,186, 0.25);
+:host {
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+}
+.card {
+  font-family: "SpaceMono", sans-serif;
+  color: #222222;
+  border-radius: 3px;
+  box-shadow: 0 0 10px 0 $shadow-color;
+  padding: 30px;
+  position: relative;
+  max-width: 700px;
+}
+.header {
+  display: flex;
+}
+.thumbnail {
+  height: 106px;
+  width: 106px;
+  transform: translateX(-45px);
+}
+.title {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1;
+  margin-bottom: 10px;
+  opacity: 1;
+  font-style: normal;
+  letter-spacing: 0px;
+}
+.credits {
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 8px;
+  opacity: 1;
+  letter-spacing: 0px;
+}
+.publisher {
+  color: #9C00B2;
+}
+.episodes {
+  font-size: 12px;
+  margin-bottom: 19px;
+  opacity: 1;
+  letter-spacing: 0px;
+}
+.divider {
+  border: 1px solid #cccccc;
+}
+.links {
+  margin-top: 9px;
+  display: flex;
+  justify-content: space-between;
+  color: rgba(119,119,119,1);
+  font-family: "SpaceMono", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: 1px;
+  text-align: left;
+  text-transform: uppercase;
+  img {
+    margin-right: 6px;
+  }
+  a {
+    display: flex;
+    align-items: center;
+  }
+}
+.description {
+  opacity: 1;
+  color: rgba(0,0,0,1);
+  font-family: "WorkSans";
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0px;
+  text-align: left;
+  margin-top: 30px;
+}
+.number {
+  height: 50px;
+  width: 50px;
+  opacity: 1;
+  background: linear-gradient(90deg, rgba(253, 116, 27, 1) 0%, rgba(163, 0, 187, 1) 100%);
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  font-size: 30px;
+  color: white;
+  position: absolute;
+  top: -25px;
+  left: -10px;
+}
