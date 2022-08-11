@@ -1,6 +1,8 @@
 @import "../../../styles/_variables.scss";
 @import "../../../styles/_fonts.scss";
 $shadow-color: rgba(165,2,186, 0.25);
+$bp-desktop: 768px;
+$bp-widescreen: 1200px;
 :host {
   padding: 15px;
   display: flex;
@@ -14,6 +16,8 @@ $shadow-color: rgba(165,2,186, 0.25);
   padding: 30px;
   position: relative;
   max-width: 700px;
+  display: flex;
+  flex-direction: column;
 }
 .header {
   display: flex;
@@ -54,7 +58,6 @@ $shadow-color: rgba(165,2,186, 0.25);
 .links {
   margin-top: 9px;
   display: flex;
-  justify-content: space-between;
   color: rgba(119,119,119,1);
   font-family: "SpaceMono", sans-serif;
   font-size: 12px;
@@ -63,12 +66,16 @@ $shadow-color: rgba(165,2,186, 0.25);
   letter-spacing: 1px;
   text-align: left;
   text-transform: uppercase;
+
   img {
     margin-right: 6px;
   }
   a {
+    color: rgba(119,119,119,1);
     display: flex;
     align-items: center;
+    margin-right: 20px;
+    text-decoration: none;
   }
 }
 .description {
@@ -95,4 +102,37 @@ $shadow-color: rgba(165,2,186, 0.25);
   position: absolute;
   top: -25px;
   left: -10px;
+}
+.info {
+  width: 100%;
+}
+
+@media (min-width: $bp-desktop) {
+  .card {
+    flex-direction: row;
+  }
+  .info {
+    width: 290px;
+    margin-left: -15px;
+  }
+  .description {
+    margin-top: 0;
+    margin-left: 30px;
+  }
+  .thumbnail {
+    height: 145px;
+    width: 145px;
+  }
+}
+@media (min-width: $bp-widescreen) {
+  .thumbnail {
+    transform: translateX(-60px);
+  }
+  .info {
+    margin-left: -30px;
+  }
+  .number {
+    left: -110px;
+    top: 0;
+  }
 }
