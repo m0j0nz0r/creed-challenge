@@ -1,32 +1,7 @@
-<div class="navigation">
-  <nav role="navigation" class="navigation__item-container">
-    <button class="hamburger navigation__toggle">
-      <div class="hamburger-box">
-        <div class="hamburger-inner"></div>
-      </div>
-    </button>
-    <ul class="navigation__items">
-      <li class="navigation__item">
-        <a class="navigation__item-link navigation__item-link--active" routerLink="podcasts">Web Design Podcasts</a>
-      </li>
-    </ul>
-  </nav>
-</div>
+<app-menu class="navigation"></app-menu>
 <header class="header">
   <h1 class="header__title">Top 5 <span class="header__genre">Web Design</span> Podcasts</h1>
 </header>
 <main>
   <app-podcast-list></app-podcast-list>
-  <div class="podcasts__container">
-    <article class="podcast__container">
-      <p>Podcast details will go in here, including</p>
-      <ul>
-        <li>thumbnail image</li>
-        <li>podcast publisher(s) that will call viewPodcast()</li>
-        <li>episode count</li>
-        <li>links to iTunes, the podcast Website, and an RSS feed (if available)</li>
-        <li>podcast description</li>
-      </ul>
-    </article>
-  </div>
 </main>

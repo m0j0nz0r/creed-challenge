@@ -1,0 +1,16 @@
+<nav role="navigation" class="navigation__item-container">
+  <button class="hamburger navigation__toggle" [ngClass]="{'hamburger--active': isActive}" (click)="isActive = !isActive">
+    <div class="hamburger-box">
+      <div class="hamburger-inner"></div>
+    </div>
+  </button>
+  <ul class="navigation__items" [ngClass]="{'navigation__items--visible': isActive}">
+    <li class="navigation__item" *ngFor="let genre of genreList$ | async">
+      <a 
+        [ngClass]="getLinkClass(genre.id)" 
+        (click)="genreClick(genre.id)">
+          {{genre.name}}
+      </a>
+    </li>
+  </ul>
+</nav>
